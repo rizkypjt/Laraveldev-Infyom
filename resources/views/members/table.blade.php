@@ -2,9 +2,10 @@
     <thead>
         <tr>
             <th>Nama Lengkap</th>
-        <th>Institusi</th>
         <th>Telpon</th>
+        <th>Institusi</th>
         <th>Gender</th>
+        <th>Kategori Id</th>
             <th colspan="3">Action</th>
         </tr>
     </thead>
@@ -12,9 +13,10 @@
     @foreach($members as $member)
         <tr>
             <td>{!! $member->nama_lengkap !!}</td>
-            <td>{!! $member->institusi !!}</td>
             <td>{!! $member->telpon !!}</td>
+            <td>{!! $member->institusi !!}</td>
             <td>{!! $member->gender !!}</td>
+            <td>{!! $member->kategori_id !!}</td>
             <td>
                 {!! Form::open(['route' => ['members.destroy', $member->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

@@ -22,4 +22,4 @@ Route::get('/home', 'HomeController@index');
 
 // penambahan Crud
 Route::resource('katmems', 'KatmemController');
-Route::resource('members', 'MemberController');
+Route::resource('/members', 'MemberController');

@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class MemberRepository
  * @package App\Repositories
- * @version April 17, 2018, 4:15 am UTC
+ * @version May 2, 2018, 2:32 am UTC
  *
  * @method Member findWithoutFail($id, $columns = ['*'])
  * @method Member find($id, $columns = ['*'])
@@ -21,9 +21,10 @@ class MemberRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'nama_lengkap',
+        'telpon',
         'institusi',
         'gender',
-        'telpon'
+        'kategori_id'
     ];
 
     /**

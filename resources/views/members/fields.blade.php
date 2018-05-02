@@ -10,6 +10,12 @@
     {!! Form::text('telpon', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Institusi Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('institusi', 'Institusi:') !!}
+    {!! Form::text('institusi', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Gender Field -->
 <div class="form-group col-sm-12">
     {!! Form::label('gender', 'Gender:') !!}
@@ -18,9 +24,15 @@
     </label>
 
     <label class="radio-inline">
-        {!! Form::radio('gender', "", null) !!} 
+        {!! Form::radio('gender', "p", null) !!} Perempuan
     </label>
 
+</div>
+
+<!-- Kategori Id Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('kategori_id', 'Kategori Id:') !!}
+    {!! Form::select('kategori_id', ['1' => 'Alumni', '2' => 'Dosen', '3' => 'Mahasiswa'], null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

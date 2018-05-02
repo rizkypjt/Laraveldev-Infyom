@@ -10,22 +10,28 @@
     <p>{!! $member->nama_lengkap !!}</p>
 </div>
 
-<!-- Institusi Field -->
-<div class="form-group">
-    {!! Form::label('institusi', 'Institusi:') !!}
-    <p>{!! $member->institusi !!}</p>
-</div>
-
 <!-- Telpon Field -->
 <div class="form-group">
     {!! Form::label('telpon', 'Telpon:') !!}
     <p>{!! $member->telpon !!}</p>
 </div>
 
+<!-- Institusi Field -->
+<div class="form-group">
+    {!! Form::label('institusi', 'Institusi:') !!}
+    <p>{!! $member->institusi !!}</p>
+</div>
+
 <!-- Gender Field -->
 <div class="form-group">
     {!! Form::label('gender', 'Gender:') !!}
     <p>{!! $member->gender !!}</p>
+</div>
+
+<!-- Kategori Id Field -->
+<div class="form-group">
+    {!! Form::label('kategori_id', 'Kategori Id:') !!}
+    <p>{!! $member->kategori_id !!}</p>
 </div>
 
 <!-- Created At Field -->

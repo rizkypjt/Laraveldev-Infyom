@@ -8,12 +8,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Member
  * @package App\Models
- * @version April 17, 2018, 4:08 am UTC
+ * @version May 2, 2018, 2:29 am UTC
  *
- * @property string nama_lengkap
- * @property string institusi
- * @property string telpon
- * @property char(1) gender
+ * @property varchar(45) nama_lengkap
+ * @property varchar(20) telpon
+ * @property varchar(45) institusi
+ * @property radio gender
+ * @property int kategori_id
  */
 class Member extends Model
 {
@@ -27,9 +28,10 @@ class Member extends Model
 
     public $fillable = [
         'nama_lengkap',
-        'institusi',
         'telpon',
-        'gender'
+        'institusi',
+        'gender',
+        'kategori_id'
     ];
 
     /**
@@ -38,9 +40,7 @@ class Member extends Model
      * @var array
      */
     protected $casts = [
-        'nama_lengkap' => 'string',
-        'institusi' => 'string',
-        'telpon' => 'string'
+        
     ];
 
     /**
@@ -50,8 +50,10 @@ class Member extends Model
      */
     public static $rules = [
         'nama_lengkap' => 'required',
+        'telpon' => 'required',
         'institusi' => 'required',
-        'gender' => 'required'
+        'gender' => 'required',
+        'kategori_id' => 'required'
     ];
 
     
